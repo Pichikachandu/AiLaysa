@@ -33,9 +33,9 @@ This guide covers deploying the AI Localization Platform to production.
    - Redeploy after adding variables
 
 ### Vercel Configuration
-The `client/vercel.json` file handles:
-- Build command: `npm run build`
-- Output directory: `dist`
+The `vercel.json` file at the root handles:
+- Build command: `cd client && npm install && npm run build`
+- Output directory: `client/dist`
 - SPA routing with rewrites
 
 ---
