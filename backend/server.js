@@ -20,8 +20,11 @@ const app = express();
 connectDB();
 
 // Middleware
+const frontendUrl = process.env.FRONTEND_URL || 'https://ai-laysa.vercel.app';
+const allowedOrigins = [frontendUrl.replace(/\/$/, ''), 'http://localhost:5173'];
+
 app.use(cors({
-  origin: ['https://ai-laysa.vercel.app', 'http://localhost:5173'],
+  origin: allowedOrigins,
   credentials: true
 }));
 
